@@ -13,6 +13,7 @@ public class LambdaTestUtility {
     public static final String HUB_URL = "https://hub.lambdatest.com/wd/hub";
     private static ThreadLocal<WebDriver> driverLocal = new ThreadLocal<WebDriver>();
     private static ThreadLocal<DesiredCapabilities> capabilitiesLocal = new ThreadLocal<DesiredCapabilities>();
+    
 
     public static WebDriver initializeLambdaTestSession(String browser, String testName){
         DesiredCapabilities capabilities = new DesiredCapabilities();
