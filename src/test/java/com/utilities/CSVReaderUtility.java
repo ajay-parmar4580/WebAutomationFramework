@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -16,7 +17,7 @@ public class CSVReaderUtility {
 
 	public static Iterator<User> readLoginData(String fileName){
 		
-		File file = new File(System.getProperty("user.dir")+"\\testData\\csvData\\"+fileName);
+		File file = new File(Paths.get(System.getProperty("user.dir"), "testData", "csvData",fileName).toString());
 		FileReader fileReader = null;
 		CSVReader csvReader;
 		String[] line;

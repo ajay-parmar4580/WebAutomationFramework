@@ -1,7 +1,5 @@
 package com.ui.tests;
 
-import static com.constants.Browser.CHROME;
-
 import com.constants.Browser;
 import com.utilities.LambdaTestUtility;
 import org.apache.logging.log4j.Logger;
@@ -15,8 +13,6 @@ import com.utilities.BrowserUtility;
 import com.utilities.LoggerUtility;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import java.util.Locale;
 
 public class TestBase {
 	protected HomePage homePage;

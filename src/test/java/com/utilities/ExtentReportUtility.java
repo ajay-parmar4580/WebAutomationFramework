@@ -1,5 +1,7 @@
 package com.utilities;
 
+import java.nio.file.Paths;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -11,8 +13,7 @@ public class ExtentReportUtility {
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	public static void setupSparkReporter(String reportName) {
-		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(
-				System.getProperty("user.dir") + "//report//" + reportName);
+		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(Paths.get(System.getProperty("user.dir"), "report",reportName).toString());
 
 		// Report Configuration
 		extentSparkReporter.config().setTheme(Theme.DARK);

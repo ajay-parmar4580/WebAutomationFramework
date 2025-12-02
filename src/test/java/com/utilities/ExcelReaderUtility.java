@@ -2,6 +2,7 @@ package com.utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -17,8 +18,8 @@ import com.ui.pojo.User;
 public abstract class ExcelReaderUtility {
 	
 	public static Iterator<User> readLoginData(String fileName){
-		
-		File xlsxFile = new File(System.getProperty("user.dir")+"//testData//excelData//"+fileName);
+		File xlsxFile =new File(Paths.get(System.getProperty("user.dir"), "testData", "excelData", fileName).toString());
+		//File xlsxFile = new File(System.getProperty("user.dir")+"//testData//excelData//"+fileName);
 		XSSFWorkbook xssfWorkook;
 		XSSFSheet xssfSheet; 
 		Iterator<Row> rowIterator;

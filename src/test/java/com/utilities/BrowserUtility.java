@@ -2,6 +2,8 @@ package com.utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -116,11 +118,12 @@ public abstract class BrowserUtility {
         File screenshotData = screenshot.getScreenshotAs(OutputType.FILE);
 
         //Create screenshot directory if not exist
-        File screenshotDir = new File(System.getProperty("user.dir") + "//screenshots//");
+        String screenshotDirPath = Paths.get(System.getProperty("user.dir"),"screenshots").toString();
+        File screenshotDir = new File(screenshotDirPath);
         if (!screenshotDir.exists())
             screenshotDir.mkdirs();
 
-        String path = System.getProperty("user.dir") + "//screenshots//" + name + "-" + timeStamp + ".png";
+        String path = Paths.get(System.getProperty("user.dir") + "screenshots" + name + "-" + timeStamp + ".png").toString();
         File screenshotFile = new File(path);
         try {
             FileUtils.copyFile(screenshotData, screenshotFile);

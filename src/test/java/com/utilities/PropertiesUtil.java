@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 import com.constants.Env;
@@ -11,9 +12,9 @@ import com.constants.Env;
 public abstract class PropertiesUtil {
 
 	public static String readProperty(Env env,String keyName){
-
-		System.out.println(System.getProperty("user.dir"));
-		File propfile = new File(System.getProperty("user.dir") + "\\config\\"+env+".properties");
+		File propfile = new File(Paths.get(System.getProperty("user.dir"), "config",env+".properties").toString());
+		
+		//File propfile = new File(System.getProperty("user.dir") + "\\config\\"+env+".properties");
 		FileReader fileReader = null;
 		Properties properties = new Properties();
 		try {
