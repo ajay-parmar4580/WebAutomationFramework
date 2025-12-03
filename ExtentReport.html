@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Test Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 3, 2025 12:06:26 PM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 3, 2025 12:27:43 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,6 +66,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -79,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginTestJson</p>
+            <p class="name">loginTestExcel</p>
             <p class="text-sm">
-              <span>12:06:33 PM</span> / <span>00:00:00:017</span>
+              <span>12:27:56 PM</span> / <span>00:00:01:322</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -89,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestJson</h5>
-<span class='badge badge-success'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-danger'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-default'>00:00:00:017</span>
+<h5 class="test-status text-skip">loginTestExcel</h5>
+<span class='badge badge-success'>12.03.2025 12:27:56 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:27:58 PM</span>
+<span class='badge badge-default'>00:00:01:322</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,28 +106,31 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:27:56 PM</td>
         <td>
-          Test Description: Verify User is able to login from json data
+          Test Description: Verify User is able to login from excel data
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:27:58 PM</td>
         <td>
-          loginTestJson SKIPPED
+          loginTestExcel SKIPPED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:27:58 PM</td>
         <td>
-          Could not start a new session. Response code 500. Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause. 
-Host info: host: 'runnervmg1sw1', ip: '10.1.0.116'
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
 Build info: version: '4.37.0', revision: '3c1da1e342'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage, --no-sandbox], binary: /usr/bin/google-chrome, extensions: []}}]}]
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [7ad21063d2b2974b6054789518e2b074, clickElement {id=f.3332DDBF7475F785061F346D5D2FB3EA.d.D8299AA50EBA85D1EF4109A25A7BB1F0.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 4884, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (7ad21063d2b2974b6054789518e2b074)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: 7ad21063d2b2974b6054789518e2b074
         </td>
       </tr>
   </tbody>
@@ -134,59 +138,70 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">loginTestCSV</p>
             <p class="text-sm">
-              <span>12:06:33 PM</span> / <span>00:00:00:017</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>12:28:01 PM</span> / <span>00:00:02:157</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestCSV</h5>
-<span class='badge badge-success'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-danger'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-default'>00:00:00:017</span>
+<h5 class="test-status text-fail">loginTestCSV</h5>
+<span class='badge badge-success'>12.03.2025 12:28:01 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:28:03 PM</span>
+<span class='badge badge-default'>00:00:02:157</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestCSV-12-28-03.png' src="/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestCSV-12-28-03.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:01 PM</td>
         <td>
           Test Description: Verify User is able to login from csv data
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:03 PM</td>
         <td>
-          loginTestCSV SKIPPED
+          loginTestCSV FAILED
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:03 PM</td>
         <td>
-          Could not start a new session. Response code 500. Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause. 
-Host info: host: 'runnervmg1sw1', ip: '10.1.0.116'
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
 Build info: version: '4.37.0', revision: '3c1da1e342'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage, --no-sandbox], binary: /usr/bin/google-chrome, extensions: []}}]}]
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [c2e222a0074c7444ac468913fc418342, clickElement {id=f.21345FC262F34B11DD9261D7428608DF.d.AFF8E803AEABCED6338DD66B4935E756.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 3760, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (c2e222a0074c7444ac468913fc418342)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: c2e222a0074c7444ac468913fc418342
         </td>
       </tr>
   </tbody>
@@ -201,7 +216,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
           <div class="test-detail">
             <p class="name">loginTestExcel</p>
             <p class="text-sm">
-              <span>12:06:33 PM</span> / <span>00:00:00:001</span>
+              <span>12:28:16 PM</span> / <span>00:00:01:612</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -210,9 +225,9 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">loginTestExcel</h5>
-<span class='badge badge-success'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-danger'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-default'>00:00:00:001</span>
+<span class='badge badge-success'>12.03.2025 12:28:16 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:28:18 PM</span>
+<span class='badge badge-default'>00:00:01:612</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -225,28 +240,31 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:16 PM</td>
         <td>
           Test Description: Verify User is able to login from excel data
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:18 PM</td>
         <td>
           loginTestExcel SKIPPED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:18 PM</td>
         <td>
-          Could not start a new session. Response code 500. Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause. 
-Host info: host: 'runnervmg1sw1', ip: '10.1.0.116'
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
 Build info: version: '4.37.0', revision: '3c1da1e342'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage, --no-sandbox], binary: /usr/bin/google-chrome, extensions: []}}]}]
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [cca5493d177125c2154733bbf18dbcb1, clickElement {id=f.E83BC75B7391387B3EF4FE5C459AB7F0.d.0B31021D73F4C85C0408C08F6CB20B96.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 4544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (cca5493d177125c2154733bbf18dbcb1)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: cca5493d177125c2154733bbf18dbcb1
         </td>
       </tr>
   </tbody>
@@ -254,14 +272,156 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">loginTestJson</p>
             <p class="text-sm">
-              <span>12:06:33 PM</span> / <span>00:00:00:001</span>
+              <span>12:28:16 PM</span> / <span>00:00:02:426</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">loginTestJson</h5>
+<span class='badge badge-success'>12.03.2025 12:28:16 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:28:19 PM</span>
+<span class='badge badge-default'>00:00:02:426</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestJson-12-28-18.png' src="/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestJson-12-28-18.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:28:16 PM</td>
+        <td>
+          Test Description: Verify User is able to login from json data
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:18 PM</td>
+        <td>
+          loginTestJson FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:18 PM</td>
+        <td>
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [4099874dd6bf7dcec85fed9522487222, clickElement {id=f.AA31AB94A6135D74A31BE7900D9967E8.d.D077B04C2992B996B2065DA311F84285.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 2348, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (4099874dd6bf7dcec85fed9522487222)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: 4099874dd6bf7dcec85fed9522487222
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginTestJson</p>
+            <p class="text-sm">
+              <span>12:28:28 PM</span> / <span>00:00:03:643</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">loginTestJson</h5>
+<span class='badge badge-success'>12.03.2025 12:28:28 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:28:31 PM</span>
+<span class='badge badge-default'>00:00:03:643</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestJson-12-28-31.png' src="/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestJson-12-28-31.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:28:28 PM</td>
+        <td>
+          Test Description: Verify User is able to login from json data
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:31 PM</td>
+        <td>
+          loginTestJson FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:31 PM</td>
+        <td>
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [44582c983751bac13a2a124409b9378b, clickElement {id=f.630FAA78CC8E8F5EB809940A2A95449A.d.AD70D2864F13E3047688B2233AC36182.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 1012, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (44582c983751bac13a2a124409b9378b)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: 44582c983751bac13a2a124409b9378b
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginTestExcel</p>
+            <p class="text-sm">
+              <span>12:28:29 PM</span> / <span>00:00:01:343</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -269,11 +429,11 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestJson</h5>
-<span class='badge badge-success'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-danger'>12.03.2025 12:06:33 PM</span>
-<span class='badge badge-default'>00:00:00:001</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<h5 class="test-status text-skip">loginTestExcel</h5>
+<span class='badge badge-success'>12.03.2025 12:28:29 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:28:30 PM</span>
+<span class='badge badge-default'>00:00:01:343</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -285,28 +445,102 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:29 PM</td>
         <td>
-          Test Description: Verify User is able to login from json data
+          Test Description: Verify User is able to login from excel data
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:30 PM</td>
         <td>
-          loginTestJson SKIPPED
+          loginTestExcel SKIPPED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>12:06:33 PM</td>
+        <td>12:28:30 PM</td>
         <td>
-          Could not start a new session. Response code 500. Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause. 
-Host info: host: 'runnervmg1sw1', ip: '10.1.0.116'
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
 Build info: version: '4.37.0', revision: '3c1da1e342'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--disable-dev-shm-usage, --no-sandbox], binary: /usr/bin/google-chrome, extensions: []}}]}]
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [a99d508d1aed56cabf259f881c461f46, clickElement {id=f.DFDD53F52F6011E90023C0E98707B83C.d.6C695860990E760B7CE70337750DB191.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 3016, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (a99d508d1aed56cabf259f881c461f46)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: a99d508d1aed56cabf259f881c461f46
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginTestExcel</p>
+            <p class="text-sm">
+              <span>12:28:41 PM</span> / <span>00:00:01:973</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">loginTestExcel</h5>
+<span class='badge badge-success'>12.03.2025 12:28:41 PM</span>
+<span class='badge badge-danger'>12.03.2025 12:28:43 PM</span>
+<span class='badge badge-default'>00:00:01:973</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestExcel-12-28-42.png' src="/home/runner/work/WebAutomationFramework/WebAutomationFramework/screenshots/loginTestExcel-12-28-42.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:28:41 PM</td>
+        <td>
+          Test Description: Verify User is able to login from excel data
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:42 PM</td>
+        <td>
+          loginTestExcel FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:28:42 PM</td>
+        <td>
+          element click intercepted: Element <h5>...</h5> is not clickable at point (189, 921). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=142.0.7444.176)
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [43150d236f39e42b6a454a6691f47fff, clickElement {id=f.5A6FA8F28CEC0B285DDB47299847E728.d.6F3EE46368BF2471C7DAEA12FF5A90B7.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 7912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (43150d236f39e42b6a454a6691f47fff)] -> xpath: //h5[text()='Book Store Application']]
+Session ID: 43150d236f39e42b6a454a6691f47fff
         </td>
       </tr>
   </tbody>
@@ -328,13 +562,13 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 3, 2025 12:06:26 PM</h3>
+<h3>Dec 3, 2025 12:27:43 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 3, 2025 12:06:33 PM</h3>
+<h3>Dec 3, 2025 12:28:44 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -346,7 +580,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>4</h3>
 </div></div>
 </div>
 </div>
@@ -367,8 +601,8 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
-<b>4</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='57%'><b>4</b> tests failed,
+<b>3</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -387,8 +621,8 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>12</b> others
+<small data-tooltip='38%'><b>8</b> events failed,
+<b data-tooltip='%'>13</b> others
 </small>
 </div>
 </div>
@@ -404,7 +638,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 </div></div>
 <script>
 var timeline = {
-"loginTestJson":0.017,"loginTestCSV":0.017,"loginTestExcel":0.001,"loginTestJson":0.001
+"loginTestExcel":1.322,"loginTestCSV":2.157,"loginTestExcel":1.612,"loginTestJson":2.426,"loginTestJson":3.643,"loginTestExcel":1.343,"loginTestExcel":1.973
 };
 </script>
 <div class="row">
@@ -436,9 +670,9 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 0,
-failParent: 0,
+failParent: 4,
 warningParent: 0,
-skipParent: 4,
+skipParent: 3,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -453,10 +687,10 @@ skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 0,
-failEvents: 0,
+failEvents: 8,
 warningEvents: 0,
-skipEvents: 8,
-infoEvents: 4
+skipEvents: 6,
+infoEvents: 7
 };
 </script>        </div>
       </div>
