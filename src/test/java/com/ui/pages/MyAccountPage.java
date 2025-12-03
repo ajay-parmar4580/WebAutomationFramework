@@ -11,7 +11,7 @@ public final class MyAccountPage extends BrowserUtility{
 		super(driver);
 	}
 	
-	private static final By USER_NAME_TEXT_LOCATOR = By.xpath("//a[@title='View my customer account']/span");
+	private static final By USER_NAME_TEXT_LOCATOR = By.id("userName-value");
 	
 	public String getUserName() {
 		return getVisibleText(USER_NAME_TEXT_LOCATOR);

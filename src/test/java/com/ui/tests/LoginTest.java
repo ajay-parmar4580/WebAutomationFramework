@@ -20,14 +20,14 @@ public class LoginTest extends TestBase{
 			dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestDataProvider")
 	public void loginTestJson(User user)
 	{	
-		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(), "Ssp Verma");
+		assertEquals(homePage.goToBookStoreApplication().goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(), "ajayparmar1087");
 	}
 	
 	@Test(description = "Verify User is able to login from csv data",groups = {"e2e","sanity"},
 			dataProviderClass = com.ui.dataproviders.LoginDataProvider.class,dataProvider = "LoginTestCSVDataProvider")
 	public void loginTestCSV(User user)
 	{	
-		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(), "Ssp Verma");
+		assertEquals(homePage.goToBookStoreApplication().goToLoginPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(), "ajayparmar1087");
 	}
 	
 	@Test(description = "Verify User is able to login from excel data",groups = {"e2e","sanity"},
@@ -35,8 +35,8 @@ public class LoginTest extends TestBase{
 			retryAnalyzer = com.ui.listeners.RetryAnalyzer.class)
 	public void loginTestExcel(User user)
 	{	
-		assertEquals(homePage.goToLoginPage()
-				.doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(), "Ssp Verma");
+		assertEquals(homePage.goToBookStoreApplication().goToLoginPage()
+				.doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(), "ajayparmar1087");
 	}
 
 }

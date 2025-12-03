@@ -3,17 +3,17 @@
 	{
 		"QA": 
 		{
-			"url" : "http://www.automationpractice.pl",
+			"url" : "https://demoqa.com/",
 			"MAX_ATTEMPTS":3
 		},
 		"DEV": 
 		{
-			"url" : "http://www.automationpractice.pl",
+			"url" : "https://demoqa.com/",
 			"MAX_ATTEMPTS":3
 		},
 		"UAT": 
 		{
-			"url" : "http://www.automationpractice.pl",
+			"url" : "https://demoqa.com/",
 			"MAX_ATTEMPTS":3
 		}
 	}

@@ -11,14 +11,14 @@ public final class LoginPage extends BrowserUtility{
 		super(driver);
 	}
 	
-	private static final By EMAIL_TEXTBOX_LOCATOR = By.id("email");
-	private static final By PWD_TEXTBOX_LOCATOR = By.id("passwd");
-	private static final By SUBMIT_BUTTON_LOCATOR = By.id("SubmitLogin");
+	private static final By USERNAME_LOCATOR = By.id("userName");
+	private static final By PASSWORD_LOCATOR = By.id("password");
+	private static final By LOGIN_BUTTON_LOCATOR = By.id("login");
 	
 	public MyAccountPage doLoginWith(String email, String password) {
-		enterText(EMAIL_TEXTBOX_LOCATOR, email);
-		enterText(PWD_TEXTBOX_LOCATOR, password);
-		clickOn(SUBMIT_BUTTON_LOCATOR);
+		enterText(USERNAME_LOCATOR, email);
+		enterText(PASSWORD_LOCATOR, password);
+		clickOn(LOGIN_BUTTON_LOCATOR);
 		return new MyAccountPage(getDriver());
 	}
 
