@@ -13,8 +13,8 @@ public class ExtentReportUtility {
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	public static void setupSparkReporter(String reportName) {
-		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(Paths.get(System.getProperty("user.dir"), "report",reportName).toString());
-
+		//ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("./report/"+reportName);
+		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"//report//"+reportName);
 		// Report Configuration
 		extentSparkReporter.config().setTheme(Theme.DARK);
 		extentSparkReporter.config().setDocumentTitle("Automation Test Report");

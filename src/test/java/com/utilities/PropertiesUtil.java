@@ -12,9 +12,9 @@ import com.constants.Env;
 public abstract class PropertiesUtil {
 
 	public static String readProperty(Env env,String keyName){
-		File propfile = new File(Paths.get(System.getProperty("user.dir"), "config",env+".properties").toString());
-		
-		//File propfile = new File(System.getProperty("user.dir") + "\\config\\"+env+".properties");
+		//File propfile = new File(Paths.get(System.getProperty("user.dir"), "config",env+".properties").toString());
+		File propfile = new File(System.getProperty("user.dir")+"//config//"+env+".properties");
+		//File propfile = new File("./config/"+env+".properties");
 		FileReader fileReader = null;
 		Properties properties = new Properties();
 		try {

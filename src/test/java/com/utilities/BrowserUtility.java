@@ -119,14 +119,7 @@ public abstract class BrowserUtility {
 		TakesScreenshot screenshot = (TakesScreenshot) driver.get();
 		File screenshotData = screenshot.getScreenshotAs(OutputType.FILE);
 
-		// Create screenshot directory if not exist
-		String screenshotDirPath = Paths.get(System.getProperty("user.dir"), "screenshots").toString();
-		File screenshotDir = new File(screenshotDirPath);
-		if (!screenshotDir.exists())
-			screenshotDir.mkdirs();
-
-		String path = Paths.get(System.getProperty("user.dir"), "screenshots", name + "-" + timeStamp + ".png")
-				.toString();
+		String path = "./screenshots/"+name + "-" + timeStamp + ".png";
 		File screenshotFile = new File(path);
 		try {
 			FileUtils.copyFile(screenshotData, screenshotFile);
