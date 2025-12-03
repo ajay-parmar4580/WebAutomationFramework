@@ -23,7 +23,7 @@ jobs:
         cache: maven
         
     - name: Running Test Automation Framework with Maven
-      run: mvn test -X -Dbrowser=chrome -DisLambdaTest=false -DisHeadLess=false
+      run: mvn test -X -Dbrowser=chrome -DisLambdaTest=true -DisHeadLess=true
 
     - name: Upload Test Logs
       if: always()
@@ -38,14 +38,6 @@ jobs:
       with: 
         name: Extent Report
         path: report/ExtentReport.html
-
-    - name: Publish Test Report
-      if: always()
-      uses: dorny/test-reporter@v1.9.1
-      with:
-        name: TestNG Results
-        path: target/surefire-reports/junitreports/TEST-*.xml
-        reporter: java-junit
 
     - name: Test Execution Status
       run : echo "Test Execution completed"
