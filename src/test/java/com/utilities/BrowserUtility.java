@@ -48,15 +48,8 @@ public abstract class BrowserUtility {
 				chromeOptions.addArguments("--headless");
 				chromeOptions.addArguments("--window-size=1920,1080");
 				driver.set(new ChromeDriver(chromeOptions));
-				driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-				driver.get().manage().window().maximize();
 			} else {
-
 				driver.set(new ChromeDriver(chromeOptions));
-				driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-				driver.get().manage().window().maximize();
 			}
 
 		} else if (browsername == Browser.EDGE) {
@@ -66,14 +59,8 @@ public abstract class BrowserUtility {
 				edgeOptions.addArguments("--window-size=1920,1080");
 				edgeOptions.addArguments("disable-gpu");
 				driver.set(new EdgeDriver(edgeOptions));
-				driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-				driver.get().manage().window().maximize();
 			} else {
 				driver.set(new EdgeDriver());
-				driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-				driver.get().manage().window().maximize();
 			}
 
 		} else if (browsername == Browser.FIREFOX) {
@@ -83,14 +70,8 @@ public abstract class BrowserUtility {
 				firefoxOptions.addArguments("--window-size=1920,1080");
 				firefoxOptions.addArguments("disable-gpu");
 				driver.set(new FirefoxDriver(firefoxOptions));
-				driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-				driver.get().manage().window().maximize();
 			} else {
 				driver.set(new FirefoxDriver());
-				driver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-				driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-				driver.get().manage().window().maximize();
 			}
 		}
 	}
