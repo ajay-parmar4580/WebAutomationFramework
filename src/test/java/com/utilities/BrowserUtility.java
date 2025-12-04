@@ -9,11 +9,7 @@ import java.time.Duration;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -22,11 +18,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.constants.Browser;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BrowserUtility {
 
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-
 	public WebDriver getDriver() {
 		return driver.get();
 	}
@@ -77,46 +74,46 @@ public abstract class BrowserUtility {
 	}
 
 	public void goToWebsite(String url) {
-		if (driver.get() != null)
-			driver.get().get(url);// go to given url
+		if (getDriver() != null)
+			getDriver().get(url);// go to given url
 	}
 
 	public void maximizeWindow() {
-		if (driver.get() != null)
-			driver.get().manage().window().maximize();// maximize the window
+		if (getDriver() != null)
+			getDriver().manage().window().maximize();// maximize the window
 	}
 
 	public void clickOn(By locator) {
-		if (driver.get() != null) {
-			WebElement element = driver.get().findElement(locator);
+		if (getDriver() != null) {
+			WebElement element = WaitUtility.waitForClickable(getDriver(),locator);
 			element.click();
 		}
 	}
 
 	public void enterText(By locator, String text) {
-		if (driver.get() != null) {
-			WebElement element = driver.get().findElement(locator);
+		if (getDriver() != null) {
+			WebElement element = WaitUtility.waitForVisibility(getDriver(),locator);
 			element.sendKeys(text);
 		}
 	}
 
 	public String getVisibleText(By locator) {
-		if (driver.get() != null) {
-			WebElement element = driver.get().findElement(locator);
+		if (getDriver() != null) {
+			WebElement element = WaitUtility.waitForVisibility(getDriver(),locator);
 			return element.getText();
 		}
 		return "";
 	}
 
 	public String takeScreenshot(String name) {
-		if (driver.get() == null) {
+		if (getDriver() == null) {
 			return "";
 		}
 		Date date = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("HH-mm-ss");
 		String timeStamp = dateFormat.format(date);
 
-		TakesScreenshot screenshot = (TakesScreenshot) driver.get();
+		TakesScreenshot screenshot = (TakesScreenshot) getDriver();
 		File screenshotData = screenshot.getScreenshotAs(OutputType.FILE);
 
 		//String path = Paths.get(System.getProperty("user.dir"), "screenshots",name + "-" + timeStamp + ".png").toString();
@@ -131,15 +128,21 @@ public abstract class BrowserUtility {
 	}
 
 	public void quitDriver() {
-		if (driver.get() != null) {
+		if (getDriver() != null) {
 			try {
-				driver.get().quit();
+				getDriver().quit();
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
 				driver.remove();
 			}
 		}
+	}
+
+	public void scrollToElement(By locator){
+		WebElement element = getDriver().findElement(locator);
+		JavascriptExecutor executor = (JavascriptExecutor)getDriver();
+		executor.executeScript("arguments[0].scrollIntoView(true);",element);
 	}
 
 }

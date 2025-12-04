@@ -26,11 +26,13 @@ public final class HomePage extends BrowserUtility{
 	}
 	
 	public LoginPage goToLoginPage() {
+		scrollToElement(LOGIN_NAV_LOCATOR);
 		clickOn(LOGIN_NAV_LOCATOR);
 		return new LoginPage(getDriver());
 	}
 	
 	public HomePage goToBookStoreApplication() {
+		scrollToElement(BOOK_STORE_APP_LOCATOR);
 		clickOn(BOOK_STORE_APP_LOCATOR);
 		return this;
 	}
