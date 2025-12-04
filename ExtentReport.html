@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Test Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 4, 2025 07:33:37 AM</span></a>
+<a href="#"><span class="badge badge-primary">Dec 4, 2025 07:31:03 AM</span></a>
 </li>
 </ul>
 </div>
@@ -66,6 +66,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
@@ -79,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginTestCSV</p>
+            <p class="name">loginTestExcel</p>
             <p class="text-sm">
-              <span>7:36:37 AM</span> / <span>00:00:00:010</span>
+              <span>7:31:16 AM</span> / <span>00:00:14:182</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -89,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestCSV</h5>
-<span class='badge badge-success'>12.04.2025 7:36:37 AM</span>
-<span class='badge badge-danger'>12.04.2025 7:36:37 AM</span>
-<span class='badge badge-default'>00:00:00:010</span>
+<h5 class="test-status text-skip">loginTestExcel</h5>
+<span class='badge badge-success'>12.04.2025 7:31:16 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:31:30 AM</span>
+<span class='badge badge-default'>00:00:14:182</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,24 +106,28 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>7:36:37 AM</td>
+        <td>7:31:16 AM</td>
         <td>
-          Test Description: Verify User is able to login from csv data
+          Test Description: Verify User is able to login from excel data
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:37 AM</td>
+        <td>7:31:30 AM</td>
         <td>
-          loginTestCSV SKIPPED
+          loginTestExcel SKIPPED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:37 AM</td>
+        <td>7:31:30 AM</td>
         <td>
-          Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. null 
-Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
+          Expected condition failed: waiting for visibility of element located by By.id: userName-value (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 4260, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a7e8a376e882b5b86f20a2fcac0feef2
         </td>
       </tr>
   </tbody>
@@ -130,55 +135,62 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">loginTestJson</p>
             <p class="text-sm">
-              <span>7:36:37 AM</span> / <span>00:00:00:010</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>7:31:16 AM</span> / <span>00:00:11:141</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestJson</h5>
-<span class='badge badge-success'>12.04.2025 7:36:37 AM</span>
-<span class='badge badge-danger'>12.04.2025 7:36:37 AM</span>
-<span class='badge badge-default'>00:00:00:010</span>
+<h5 class="test-status text-fail">loginTestJson</h5>
+<span class='badge badge-success'>12.04.2025 7:31:16 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:31:27 AM</span>
+<span class='badge badge-default'>00:00:11:141</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='./screenshots/loginTestJson-07-31-26.png' src="./screenshots/loginTestJson-07-31-26.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>7:36:37 AM</td>
+        <td>7:31:16 AM</td>
         <td>
           Test Description: Verify User is able to login from json data
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:37 AM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:31:26 AM</td>
         <td>
-          loginTestJson SKIPPED
+          loginTestJson FAILED
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:37 AM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:31:26 AM</td>
         <td>
-          Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. null 
-Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
+          expected [ajayparmar1087] but found [ajayparmar4580]
         </td>
       </tr>
   </tbody>
@@ -186,55 +198,62 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="3"
+        <li class="test-item"  status="fail" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginTestJson</p>
+            <p class="name">loginTestCSV</p>
             <p class="text-sm">
-              <span>7:36:37 AM</span> / <span>00:00:00:001</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>7:31:44 AM</span> / <span>00:00:07:252</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestJson</h5>
-<span class='badge badge-success'>12.04.2025 7:36:37 AM</span>
-<span class='badge badge-danger'>12.04.2025 7:36:37 AM</span>
-<span class='badge badge-default'>00:00:00:001</span>
+<h5 class="test-status text-fail">loginTestCSV</h5>
+<span class='badge badge-success'>12.04.2025 7:31:44 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:31:52 AM</span>
+<span class='badge badge-default'>00:00:07:252</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='./screenshots/loginTestCSV-07-31-51.png' src="./screenshots/loginTestCSV-07-31-51.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>7:36:37 AM</td>
+        <td>7:31:44 AM</td>
         <td>
-          Test Description: Verify User is able to login from json data
+          Test Description: Verify User is able to login from csv data
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:37 AM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:31:51 AM</td>
         <td>
-          loginTestJson SKIPPED
+          loginTestCSV FAILED
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:37 AM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:31:51 AM</td>
         <td>
-          Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. null 
-Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
+          expected [ajayparmar1087] but found [ajayparmar4580]
         </td>
       </tr>
   </tbody>
@@ -242,25 +261,25 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 </div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginTestExcel</p>
+            <p class="name">loginTestJson</p>
             <p class="text-sm">
-              <span>7:36:38 AM</span> / <span>00:00:00:001</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>7:31:48 AM</span> / <span>00:06:04:263</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">loginTestExcel</h5>
-<span class='badge badge-success'>12.04.2025 7:36:38 AM</span>
-<span class='badge badge-danger'>12.04.2025 7:36:38 AM</span>
-<span class='badge badge-default'>00:00:00:001</span>
+<h5 class="test-status text-fail">loginTestJson</h5>
+<span class='badge badge-success'>12.04.2025 7:31:48 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:37:52 AM</span>
+<span class='badge badge-default'>00:06:04:263</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -273,24 +292,236 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>7:36:38 AM</td>
+        <td>7:31:48 AM</td>
+        <td>
+          Test Description: Verify User is able to login from json data
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:34:52 AM</td>
+        <td>
+          loginTestJson FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:34:52 AM</td>
+        <td>
+          java.util.concurrent.TimeoutException
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d6b5322256609198ce51fd59f02a9e10, sendKeysToElement {id=f.0543FDA8C1896D338E325ED6118DA328.d.400A9BD0A66D2B6F9050C7EDBB6C96F8.e.37, value=[Ljava.lang.CharSequence;@4002b307}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 6044, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows XP (d6b5322256609198ce51fd59f02a9e10)] -> id: userName]
+Session ID: d6b5322256609198ce51fd59f02a9e10
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>7:37:52 AM</td>
+        <td>
+          Could not capture screenshot: java.util.concurrent.TimeoutException
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d6b5322256609198ce51fd59f02a9e10, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 6044, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d6b5322256609198ce51fd59f02a9e10
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginTestExcel</p>
+            <p class="text-sm">
+              <span>7:32:06 AM</span> / <span>00:00:18:599</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">loginTestExcel</h5>
+<span class='badge badge-success'>12.04.2025 7:32:06 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:32:24 AM</span>
+<span class='badge badge-default'>00:00:18:599</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>7:32:06 AM</td>
         <td>
           Test Description: Verify User is able to login from excel data
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:38 AM</td>
+        <td>7:32:24 AM</td>
         <td>
           loginTestExcel SKIPPED
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>7:36:38 AM</td>
+        <td>7:32:24 AM</td>
         <td>
-          Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. null 
-Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
+          Expected condition failed: waiting for visibility of element located by By.id: userName-value (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 2476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aac06ad680a20695824cab934886ed71
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginTestExcel</p>
+            <p class="text-sm">
+              <span>7:32:37 AM</span> / <span>00:03:04:854</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">loginTestExcel</h5>
+<span class='badge badge-success'>12.04.2025 7:32:37 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:35:42 AM</span>
+<span class='badge badge-default'>00:03:04:854</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>7:32:37 AM</td>
+        <td>
+          Test Description: Verify User is able to login from excel data
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>7:35:42 AM</td>
+        <td>
+          loginTestExcel SKIPPED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>7:35:42 AM</td>
+        <td>
+          java.util.concurrent.TimeoutException
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [92391352863dbdd7f59d718ae0aa9aa3, findElement {using=id, value=userName}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 6164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 92391352863dbdd7f59d718ae0aa9aa3
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">loginTestExcel</p>
+            <p class="text-sm">
+              <span>7:38:42 AM</span> / <span>00:00:00:004</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">loginTestExcel</h5>
+<span class='badge badge-success'>12.04.2025 7:38:42 AM</span>
+<span class='badge badge-danger'>12.04.2025 7:38:42 AM</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>7:38:42 AM</td>
+        <td>
+          Test Description: Verify User is able to login from excel data
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:38:42 AM</td>
+        <td>
+          loginTestExcel FAILED
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>7:38:42 AM</td>
+        <td>
+          Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, findElement {using=xpath, value=//h5[text()='Book Store Application']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 6164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>7:38:42 AM</td>
+        <td>
+          Could not capture screenshot: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.11.0-1018-azure', java.version: '11.0.29'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.176 (c128b60bcfa..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, goog:processID: 6164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-us.lambdatest.com..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
         </td>
       </tr>
   </tbody>
@@ -312,13 +543,13 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 4, 2025 07:33:37 AM</h3>
+<h3>Dec 4, 2025 07:31:03 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 4, 2025 07:36:38 AM</h3>
+<h3>Dec 4, 2025 07:40:52 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -330,7 +561,7 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>4</h3>
 </div></div>
 </div>
 </div>
@@ -351,8 +582,8 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
-<b>4</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='57%'><b>4</b> tests failed,
+<b>3</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -371,8 +602,8 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>12</b> others
+<small data-tooltip='34%'><b>8</b> events failed,
+<b data-tooltip='%'>15</b> others
 </small>
 </div>
 </div>
@@ -388,7 +619,7 @@ Host info: host: 'runnervmoqczp', ip: '10.1.0.169'
 </div></div>
 <script>
 var timeline = {
-"loginTestCSV":0.01,"loginTestJson":0.01,"loginTestJson":0.001,"loginTestExcel":0.001
+"loginTestExcel":14.182,"loginTestJson":11.141,"loginTestCSV":7.252,"loginTestJson":364.263,"loginTestExcel":18.599,"loginTestExcel":184.854,"loginTestExcel":0.004
 };
 </script>
 <div class="row">
@@ -420,9 +651,9 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 0,
-failParent: 0,
+failParent: 4,
 warningParent: 0,
-skipParent: 4,
+skipParent: 3,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -437,10 +668,10 @@ skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 0,
-failEvents: 0,
-warningEvents: 0,
-skipEvents: 8,
-infoEvents: 4
+failEvents: 8,
+warningEvents: 2,
+skipEvents: 6,
+infoEvents: 7
 };
 </script>        </div>
       </div>
