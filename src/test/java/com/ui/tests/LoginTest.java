@@ -22,7 +22,7 @@ public class LoginTest extends TestBase{
 	{	
 		assertEquals(homePage.goToLoginPage()
 				.doLoginWith(user.getEmailAddress(),user.getPassword())
-				.getUserName(), "Carom Ex");
+				.getUserName(), "Carom Em");
 	}
 	
 	@Test(description = "Verify User is able to login from csv data",groups = {"e2e","sanity"},
@@ -31,7 +31,7 @@ public class LoginTest extends TestBase{
 	{	
 		assertEquals(homePage.goToLoginPage()
 				.doLoginWith(user.getEmailAddress(),user.getPassword())
-				.getUserName(), "Carom Ex");
+				.getUserName(), "Carom Em");
 	}
 	
 	@Test(description = "Verify User is able to login from excel data",groups = {"e2e","sanity"},
@@ -41,7 +41,7 @@ public class LoginTest extends TestBase{
 	{	
 		assertEquals(homePage.goToLoginPage()
 				.doLoginWith(user.getEmailAddress(),user.getPassword())
-				.getUserName(), "Carom Ex");
+				.getUserName(), "Carom Em");
 	}
 
 }
