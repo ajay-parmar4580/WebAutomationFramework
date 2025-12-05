@@ -5,22 +5,21 @@ import org.openqa.selenium.WebDriver;
 
 import com.utilities.BrowserUtility;
 
-public final class LoginPage extends BrowserUtility{
-
+public final class LoginPage extends BrowserUtility {
 	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
-	
-	private static final By USERNAME_LOCATOR = By.id("userName");
-	private static final By PASSWORD_LOCATOR = By.id("password");
-	private static final By LOGIN_BUTTON_LOCATOR = By.id("login");
-	
-	public MyAccountPage doLoginWith(String email, String password) {
-		enterText(USERNAME_LOCATOR, email);
-		enterText(PASSWORD_LOCATOR, password);
-		clickOn(LOGIN_BUTTON_LOCATOR);
-		return new MyAccountPage(getDriver());
-	}
 
+	private static final By EMAIL_TEXT_BOX_LOCATOR = By.xpath("//input[@id='email']");
+	private static final By PASSWORD_TEXT_BOX_LOCATOR = By.xpath("//input[@id='passwd']");
+	private static final By SUBMIT_BUTTON_LOCATOR = By.id("SubmitLogin");
+
+	public MyAccountPage doLoginWith(String email, String password) {
+		enterText(EMAIL_TEXT_BOX_LOCATOR, email);
+		enterText(PASSWORD_TEXT_BOX_LOCATOR, password);
+		clickOn(SUBMIT_BUTTON_LOCATOR);
+		return new MyAccountPage(getDriver());
+
+	}
 
 }

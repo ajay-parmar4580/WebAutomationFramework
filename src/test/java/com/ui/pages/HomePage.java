@@ -10,32 +10,27 @@ import org.openqa.selenium.WebDriver;
 
 import static com.utilities.PropertiesUtil.*;
 
-public final class HomePage extends BrowserUtility{
-	//In this class we are going to follow Page Object Design Pattern
-	private static final By LOGIN_NAV_LOCATOR = By.xpath("//span[text()='Login']//parent::li");
-	private static final By BOOK_STORE_APP_LOCATOR = By.xpath("//h5[text()='Book Store Application']");	
-	public HomePage(Browser browserName,boolean isHeadless) {
-		super(browserName,isHeadless);//To call the parent class constructor form child constructor
-		//goToWebsite(readProperty(QA, "URL"));
+public final class HomePage extends BrowserUtility {
+	private static final By SIGN_IN_LINK_LOCATOR = By.className("login");
+
+	public HomePage(Browser browserName, boolean isHeadless) {
+		super(browserName, isHeadless);
+		// goToWebsite(readProperty(QA,"URL"));//To call the parent class constructor
+		// from child class constructor
 		goToWebsite(JSONUtility.readEnvURL(QA).getUrl());
+		maximizeWindow();
 	}
 
-	public HomePage(WebDriver driver){
+	public HomePage(WebDriver driver) {
 		super(driver);
 		goToWebsite(JSONUtility.readEnvURL(QA).getUrl());
+
 	}
-	
-	public LoginPage goToLoginPage() {
-		scrollToElement(LOGIN_NAV_LOCATOR);
-		clickOn(LOGIN_NAV_LOCATOR);
+
+	public LoginPage goToLoginPage() { // page function
+		clickOn(SIGN_IN_LINK_LOCATOR);
 		return new LoginPage(getDriver());
+
 	}
-	
-	public HomePage goToBookStoreApplication() {
-		scrollToElement(BOOK_STORE_APP_LOCATOR);
-		clickOn(BOOK_STORE_APP_LOCATOR);
-		return this;
-	}
-	
 
 }
