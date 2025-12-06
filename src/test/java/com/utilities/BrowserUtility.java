@@ -6,7 +6,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -93,7 +95,22 @@ public abstract class BrowserUtility {
 	public void enterText(By locator, String text) {
 		if (getDriver() != null) {
 			WebElement element = WaitUtility.waitForVisibility(getDriver(),locator);
+			clearText(locator);
 			element.sendKeys(text);
+		}
+	}
+
+	public void clearText(By locator) {
+		if (getDriver() != null) {
+			WebElement element = WaitUtility.waitForVisibility(getDriver(),locator);
+			element.clear();
+		}
+	}
+
+	public void enterSpecialKey(By locator, Keys keyToEnter) {
+		if (getDriver() != null) {
+			WebElement element = WaitUtility.waitForVisibility(getDriver(),locator);
+			element.sendKeys(keyToEnter);
 		}
 	}
 
@@ -103,6 +120,18 @@ public abstract class BrowserUtility {
 			return element.getText();
 		}
 		return "";
+	}
+
+	public List<String> getAllVisibleText(By locator){
+		if (getDriver() != null) {
+			List<WebElement> webElementList = WaitUtility.waitForVisibleElements(getDriver(),locator);
+			List<String> textList = new ArrayList<>();
+			for(WebElement element: webElementList){
+				textList.add(element.getText());
+			}
+			return textList;
+		}
+		return null;
 	}
 
 	public String takeScreenshot(String name) {
