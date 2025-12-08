@@ -4,6 +4,7 @@ import com.utilities.BrowserUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class SearchProductPage extends BrowserUtility {
@@ -19,8 +20,10 @@ public class SearchProductPage extends BrowserUtility {
         return getVisibleText(PRODUCT_LISTING_HEADER);
     }
 
-    public List<String> getAllProductNames(){
-        return getAllVisibleText(PRODUCT_NAME_LIST);
+    public boolean isSearchTermPresentInProductList(String searchTerm){
+    	List<String> keywords = Arrays.asList(searchTerm.toLowerCase().split(" "));
+    	List<String> productList = getAllVisibleText(PRODUCT_NAME_LIST);
+        return productList.stream().anyMatch(name->(keywords.stream().anyMatch(name.toLowerCase()::contains)));
     }
 
 

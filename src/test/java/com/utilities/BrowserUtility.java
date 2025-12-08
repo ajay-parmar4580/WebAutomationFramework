@@ -20,6 +20,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.constants.Browser;
+
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -133,6 +135,22 @@ public abstract class BrowserUtility {
 		}
 		return null;
 	}
+	
+	public void selectDropDownByVisibleText(By locator,String optionValue) {
+		if (getDriver() != null) {
+			//WebElement element = WaitUtility.waitForClickable(getDriver(), locator);
+			WebElement element = getDriver().findElement(locator);
+			Select select = new Select(element);
+			select.selectByVisibleText(optionValue);
+		}
+	}
+	
+	public void selectDynamicDropdown(By locator,String optionValue) {
+		if(getDriver() != null) {
+			clickOn(locator);
+			clickOn(By.xpath("//*[text()='"+optionValue+"']"));
+		}
+	}
 
 	public String takeScreenshot(String name) {
 		if (getDriver() == null) {
@@ -166,12 +184,6 @@ public abstract class BrowserUtility {
 				driver.remove();
 			}
 		}
-	}
-
-	public void scrollToElement(By locator){
-		WebElement element = getDriver().findElement(locator);
-		JavascriptExecutor executor = (JavascriptExecutor)getDriver();
-		executor.executeScript("arguments[0].scrollIntoView(true);",element);
 	}
 
 }
