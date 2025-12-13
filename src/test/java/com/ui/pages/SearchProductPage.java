@@ -21,10 +21,14 @@ public class SearchProductPage extends BrowserUtility {
     }
 
     public boolean isSearchTermPresentInProductList(String searchTerm){
-    	List<String> keywords = Arrays.asList(searchTerm.toLowerCase().split(" "));
-    	List<String> productList = getAllVisibleText(PRODUCT_NAME_LIST);
+        List<String> keywords = Arrays.asList(searchTerm.toLowerCase().split(" "));
+        List<String> productList = getAllVisibleText(PRODUCT_NAME_LIST);
         return productList.stream().anyMatch(name->(keywords.stream().anyMatch(name.toLowerCase()::contains)));
     }
 
+    public ProductDetailPage clickOnTheProductAt(int index){
+        clickOn(getAllElements(PRODUCT_NAME_LIST).get(index));
+        return new ProductDetailPage(getDriver());
+    }
 
 }

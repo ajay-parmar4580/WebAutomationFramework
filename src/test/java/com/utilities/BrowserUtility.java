@@ -2,10 +2,7 @@ package com.utilities;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,8 +19,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import com.constants.Browser;
 
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BrowserUtility {
 
@@ -94,6 +89,12 @@ public abstract class BrowserUtility {
 		}
 	}
 
+	public void clickOn(WebElement element) {
+		if (getDriver() != null) {
+			element.click();
+		}
+	}
+
 	public void enterText(By locator, String text) {
 		if (getDriver() != null) {
 			WebElement element = WaitUtility.waitForVisibility(getDriver(),locator);
@@ -135,11 +136,18 @@ public abstract class BrowserUtility {
 		}
 		return null;
 	}
+
+	public List<WebElement> getAllElements(By locator){
+		if (getDriver() != null) {
+			List<WebElement> webElementList = WaitUtility.waitForVisibleElements(getDriver(),locator);
+			return webElementList;
+		}
+		return null;
+	}
 	
 	public void selectDropDownByVisibleText(By locator,String optionValue) {
 		if (getDriver() != null) {
-			//WebElement element = WaitUtility.waitForClickable(getDriver(), locator);
-			WebElement element = getDriver().findElement(locator);
+			WebElement element = WaitUtility.waitForVisibility(getDriver(), locator);
 			Select select = new Select(element);
 			select.selectByVisibleText(optionValue);
 		}
