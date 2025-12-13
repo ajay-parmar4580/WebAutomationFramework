@@ -40,16 +40,16 @@ public class TestBase {
 		}
 	}
 
-//	@AfterMethod(description="Close the Broeser and cleanUp")
-//	public void tearDown() {
-//		if(homePage!=null) {
-//			if(isLambdaTest)
-//				LambdaTestUtility.quitSession();
-//			else
-//				homePage.quitDriver();
-//		}
-//
-//	}
+	@AfterMethod(description="Close the Browser and cleanUp")
+	public void tearDown() {
+		if(homePage!=null) {
+			if(isLambdaTest)
+				LambdaTestUtility.quitSession();
+			else
+				homePage.quitDriver();
+		}
+
+	}
 
 	public BrowserUtility getInstance() {
 		return homePage;
